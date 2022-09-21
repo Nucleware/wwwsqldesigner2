@@ -1,0 +1,45 @@
+.window {
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, .19), 0 6px 6px rgba(0, 0, 0, .23);
+  padding: 15px;
+}
+
+.windowtitle {
+  font-size: x-large;
+  margin: 15px 15px 24px 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.windowcontent {
+  padding: 1em;
+}
+
+.windowok {
+  /* FIXME: This !important marker is here because this stylesheet is processed before App.css, not after */
+  color: #FF4081 !important;
+}
+
+.windowok,
+.windowcancel {
+  float: right;
+}
+
+.windowok:hover,
+.windowcancel:hover {
+  background-color: #f2f2f2;
+}
+
+.throbber {
+  position: absolute;
+  top: 2px;
+  right: 3px;
+  visibility: hidden;
+}
+
+.background {
+  position: absolute;
+  background-color: #000;
+  opacity: 0.5;
+}

@@ -1,0 +1,30 @@
+.toggle {
+  margin-bottom: 5px;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+  border-radius: 2px;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 22px;
+  opacity: .7;
+}
+
+.toggle:hover {
+  background-color: #de2665;
+}
+
+.toggle.on {
+  background-image: url(../../../public/images/up_2_black.png);
+}
+
+.toggle.on:hover {
+  background-image: url(../../../public/images/up_2_white.png);
+}
+
+.toggle.off {
+  background-image: url(../../../public/images/down_2_black.png);
+}
+
+.toggle.off:hover {
+  background-image: url(../../../public/images/down_2_white.png);
+}

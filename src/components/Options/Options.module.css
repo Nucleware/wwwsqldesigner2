@@ -1,0 +1,23 @@
+.opts {
+  width: 700px;
+}
+
+.opts td {
+  padding-top: 15px;
+  margin-bottom: 20px;
+}
+
+.opts .optionsnotice {
+  opacity: 0.7;
+}
+
+.opts hr {
+  background-color: #ddd;
+  height: 1px;
+  border: none;
+  margin: 25px 0px 25px 0px;
+}
+
+.small {
+  font-size: 85%;
+}

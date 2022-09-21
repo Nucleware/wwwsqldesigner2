@@ -1,24 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import './i18n';
+import MenuBar from './components/MenuBar/MenuBar';
+import Area from './components/Area/Area';
+import MiniMap from './components/MiniMap/MiniMap';
+import Window from './components/Window/Window';
+import { t } from 'i18next';
+import Options from './components/Options/Options';
+import TableForm from './components/TableForm/TableForm';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Area />
+      <div id="controls">
+        <MenuBar />
+        <MiniMap />
+        <Window title={t('options')}>
+          <Options />
+        </Window>
+        <Window title={t('edittable')}>
+          <TableForm />
+        </Window>
+      </div>
+    </>
   );
 }
 

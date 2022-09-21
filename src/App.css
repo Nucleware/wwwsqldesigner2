@@ -1,38 +1,164 @@
-.App {
+body {
+  font-family: verdana, sans-serif;
+  font-size: 12px;
+  padding: 0px;
+  margin: 0px;
+  background: #FFF;
+  font-weight: 400;
+  line-height: 1.429;
+  color: rgba(0, 0, 0, .87);
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input[type=button] {
+  font-family: verdana, sans-serif;
+  -webkit-appearance: button;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, .87);
+  background-color: #FFF;
+  display: inline-block;
+  height: 36px;
+  padding: 0 26px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  background-image: none;
   text-align: center;
+  line-height: 36px;
+  vertical-align: middle;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-size: 14px;
+  letter-spacing: .03em;
+  position: relative;
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input[type=text] {
+  font-family: verdana, sans-serif;
+  height: 32px;
+  display: block;
+  background-color: transparent;
+  color: rgba(0, 0, 0, .87);
+  border: none;
+  border-bottom-color: currentcolor;
+  border-bottom-style: none;
+  border-bottom-width: medium;
+  border-bottom: 1px solid rgba(0, 0, 0, .26);
+  outline: 0;
+  width: 100%;
+  font-size: 16px;
+  padding: 0;
+  box-shadow: none;
+  border-radius: 0;
+  background-image: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+textarea {
+  min-width: 500px;
+  font-family: verdana, sans-serif;
+  min-height: 64px;
+  display: block;
+  background-color: transparent;
+  color: rgba(0, 0, 0, .87);
+  border: none;
+  border-bottom-color: currentcolor;
+  border-bottom-style: none;
+  border-bottom-width: medium;
+  border-bottom: 1px solid rgba(0, 0, 0, .26);
+  outline: 0;
+  width: 100%;
+  font-size: 16px;
+  padding: 0;
+  box-shadow: none;
+  border-radius: 0;
+  background-image: none;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+select {
+  font-family: verdana, sans-serif;
+  display: block;
+  height: 32px;
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: 0;
+  border: none;
+  border-bottom-color: currentcolor;
+  border-bottom-style: none;
+  border-bottom-width: medium;
+  border-bottom: 1px solid rgba(0, 0, 0, .26);
+  border-radius: 0;
+  box-shadow: none;
+  background-color: transparent;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iNiIgd2lkdGg9IjEwIj48cG9seWdvbiBwb2ludHM9IjAsMCAxMCwwIDUsNiIgc3R5bGU9ImZpbGw6cmdiYSgwLDAsMCwuMjQpOyIvPjwvc3ZnPg==);
+  background-repeat: no-repeat;
+  background-position: right center;
+  cursor: pointer;
+  color: rgba(0, 0, 0, .87);
+  font-size: 16px;
+  padding: 0 25px 0 0;
 }
 
-.App-link {
-  color: #61dafb;
+textarea:focus,
+select:focus,
+input[type=text]:focus {
+  border-color: #2196F3;
+  border-width: 2px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+select optgroup {
+  color: rgba(0, 0, 0, .54);
+  font-size: .9em;
+  background: white !important;
+  font-style: normal;
+}
+
+legend {
+  text-align: left;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 10px;
+  font-size: 21px;
+  color: rgba(0, 0, 0, .87);
+  line-height: inherit;
+}
+
+fieldset {
+  border: none;
+  padding: 0px;
+  margin: 0px 0px 10px 0px;
+}
+
+label {
+  opacity: 0.7;
+}
+
+label,
+input,
+select {
+  vertical-align: middle;
+}
+
+#controls {
+  position: absolute;
+  left: 0px;
+  top: 0px;
 }

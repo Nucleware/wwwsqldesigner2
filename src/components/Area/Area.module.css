@@ -1,0 +1,7 @@
+.area {
+  position: relative;
+  background: transparent url(../../../public/images/back_dim.png);
+  width: 3000px;
+  height: 3000px;
+  opacity: 0.7;
+}

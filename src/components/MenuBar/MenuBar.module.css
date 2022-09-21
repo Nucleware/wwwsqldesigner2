@@ -1,0 +1,56 @@
+.bar {
+  position: fixed;
+  transition: all .2s ease-in-out;
+  right: 4px;
+  top: 0px;
+  width: 190px;
+  margin: 0px 0px 20px 0px;
+  padding: 0px;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  border-radius: 0px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px 0px, rgba(0, 0, 0, 0.23) 0px 3px 6px 0px;
+  box-sizing: border-box;
+  max-height: 600px;
+}
+
+.bar.hidden {
+  max-height: 22px;
+  overflow: hidden;
+}
+
+.bar input {
+  transition: all .2s ease-in-out;
+  border-radius: 2px;
+  width: 100%;
+  height: auto;
+  margin: auto auto 3px auto;
+  padding: 2px;
+  line-height: 1.3;
+  opacity: .7;
+  text-transform: none;
+}
+
+.bar input:hover {
+  background-color: #de2665;
+  color: #fff;
+}
+
+.bar input:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
+  opacity: .4;
+  box-shadow: none;
+}
+
+.bar input.small {
+  width: 45%;
+  display: inline;
+}
+
+.bar hr {
+  margin: 8px;
+  background-color: #ddd;
+  height: 1px;
+  border: none;
+}
