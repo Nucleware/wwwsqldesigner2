@@ -1,0 +1,6 @@
+{
+    "editor.tabSize": 2,
+    "javascript.format.semicolons": "insert",
+    "editor.formatOnSave": true,
+    "eslint.codeActionsOnSave.rules": null
+}
