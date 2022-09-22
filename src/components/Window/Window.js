@@ -43,7 +43,7 @@ function Window({ title, onResult, showThrobber, open, children }) {
     return () => {
       document.removeEventListener('keydown', key);
     };
-  });
+  }, [onResult, open]);
 
   if (!open) {
     return <></>;
