@@ -1,3 +1,5 @@
+import React from 'react';
+
 import './App.css';
 import './i18n';
 import MenuBar from './components/MenuBar/MenuBar';
@@ -10,7 +12,7 @@ import TableForm from './components/TableForm/TableForm';
 
 function App() {
   return (
-    <>
+    <React.StrictMode>
       <Area />
       <div id="controls">
         <MenuBar />
@@ -22,7 +24,7 @@ function App() {
           <TableForm />
         </Window>
       </div>
-    </>
+    </React.StrictMode>
   );
 }
 
