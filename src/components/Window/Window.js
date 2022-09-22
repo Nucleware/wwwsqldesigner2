@@ -1,51 +1,11 @@
 import { t } from 'i18next';
-import { useEffect, useRef, useState } from 'react';
+import { useCentredDiv } from '../../lib/useCentredDiv';
+import { useWindowDimensions } from '../../lib/useWindowDimensions';
 import styles from './Window.module.css';
 
 function Window({ title, onOK, showThrobber, open, children }) {
-  const [dimensions, setDimensions] = useState({
-    height: 0,
-    width: 0,
-    scrollX: 0,
-    scrollY: 0,
-  });
-
-  const [position, setPosition] = useState({
-    left: 0,
-    top: 0,
-  });
-
-  const ref = useRef();
-
-  useEffect(() => {
-    if (!open) {
-      return;
-    }
-
-    setPosition({
-      left: Math.round(dimensions.scrollX + (dimensions.width - ref.current.offsetWidth) / 2),
-      top: Math.round(dimensions.scrollY + (dimensions.height - ref.current.offsetHeight) / 2),
-    });
-
-    function handleScrollResize() {
-      setDimensions({
-        height: document.documentElement.clientHeight,
-        width: document.documentElement.clientWidth,
-        scrollX: document.documentElement.scrollLeft,
-        scrollY: document.documentElement.scrollTop,
-      });
-    }
-
-    handleScrollResize();
-
-    window.addEventListener('resize', handleScrollResize);
-    window.addEventListener('scroll', handleScrollResize);
-
-    return () => {
-      window.removeEventListener('resize', handleScrollResize);
-      window.removeEventListener('scroll', handleScrollResize);
-    };
-  }, [dimensions, open]);
+  const dimensions = useWindowDimensions();
+  const [position, ref] = useCentredDiv();
 
   if (!open) {
     return <></>;
