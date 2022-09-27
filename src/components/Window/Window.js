@@ -4,12 +4,12 @@ import { useCentredDiv } from '../../lib/useCentredDiv';
 import { useWindowDimensions } from '../../lib/useWindowDimensions';
 import styles from './Window.module.css';
 
-function Window({ title, onResult, showThrobber, open, children }) {
+function Window({ title, onResult, showThrobber, children }) {
   const dimensions = useWindowDimensions();
   const [position, ref] = useCentredDiv();
 
   useEffect(() => {
-    if (!ref.current || !open) {
+    if (!ref.current) {
       return;
     }
 
@@ -22,14 +22,10 @@ function Window({ title, onResult, showThrobber, open, children }) {
         break;
       }
     }
-  }, [ref, open]);
+  }, [ref]);
 
   useEffect(() => {
     function key(e) {
-      if (!open) {
-        return;
-      }
-
       if (e.keyCode === 13) {
         onResult(true);
       }
@@ -43,11 +39,7 @@ function Window({ title, onResult, showThrobber, open, children }) {
     return () => {
       document.removeEventListener('keydown', key);
     };
-  }, [onResult, open]);
-
-  if (!open) {
-    return <></>;
-  }
+  }, [onResult]);
 
   return (
     <>

@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import Toggle from "../Toggle/Toggle";
 import styles from './MenuBar.module.css';
 
-function MenuBar() {
+function MenuBar({ openOptions }) {
   const defaultState = !document.location.href.match(/toolbar=hidden/);
 
   const [visible, setVisible] = useState(defaultState);
@@ -38,7 +38,7 @@ function MenuBar() {
 
         <hr />
 
-        <input type="button" value={t("options")} />
+        <input type="button" value={t("options")} onClick={openOptions} />
         <a href="https://github.com/ondras/wwwsqldesigner/wiki" target="_blank" rel="noreferrer">
           <input type="button" value={t('docs')} />
         </a>
