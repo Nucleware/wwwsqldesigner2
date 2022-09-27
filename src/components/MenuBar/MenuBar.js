@@ -14,33 +14,33 @@ function MenuBar() {
     <>
       <div className={classNames(styles.bar, { [styles.hidden]: !visible })}>
         <Toggle state={visible} onClick={() => setVisible(!visible)}></Toggle>
-        <input type="button" id="saveload" value={t("saveload")} />
+        <input type="button" value={t("saveload")} />
 
         <hr />
 
-        <input type="button" id="addtable" value={t("addtable")} />
-        <input type="button" id="edittable" value={t("edittable")} />
-        <input type="button" id="tablekeys" value={t("tablekeys")} />
-        <input type="button" id="removetable" value={t("removetable")} />
-        <input type="button" id="aligntables" value={t("aligntables")} />
-        <input type="button" id="cleartables" value={t("cleartables")} />
+        <input type="button" value={t("addtable")} />
+        <input type="button" value={t("edittable")} />
+        <input type="button" value={t("tablekeys")} />
+        <input type="button" value={t("removetable")} />
+        <input type="button" value={t("aligntables")} />
+        <input type="button" value={t("cleartables")} />
 
         <hr />
 
-        <input type="button" id="addrow" value={t("addrow")} />
-        <input type="button" id="editrow" value={t("editrow")} />
-        <input type="button" id="uprow" value={t("uprow")} className={styles.small} />
-        <input type="button" id="downrow" value={t("downrow")} className={styles.small} />
-        <input type="button" id="foreigncreate" value={t("foreigncreate")} />
-        <input type="button" id="foreignconnect" value={t("foreignconnect")} />
-        <input type="button" id="foreigndisconnect" value={t("foreigndisconnect")} />
-        <input type="button" id="removerow" value={t("removerow")} />
+        <input type="button" value={t("addrow")} />
+        <input type="button" value={t("editrow")} />
+        <input type="button" value={t("uprow")} className={styles.small} />
+        <input type="button" value={t("downrow")} className={styles.small} />
+        <input type="button" value={t("foreigncreate")} />
+        <input type="button" value={t("foreignconnect")} />
+        <input type="button" value={t("foreigndisconnect")} />
+        <input type="button" value={t("removerow")} />
 
         <hr />
 
-        <input type="button" id="options" value={t("options")} />
+        <input type="button" value={t("options")} />
         <a href="https://github.com/ondras/wwwsqldesigner/wiki" target="_blank" rel="noreferrer">
-          <input type="button" id="docs" value={t('docs')} />
+          <input type="button" value={t('docs')} />
         </a>
       </div>
     </>
